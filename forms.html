@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms Explained</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f0f2f5;
+        }
+
+        header, section, footer {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h5 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        input, textarea, select {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        table, th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background: #e9ecef;
+        }
+        .back-button {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .back-button a {
+      display: inline-block;
+      background-color: #2980b9;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #1c5980;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Forms kya hote hain?</h1>
+        <p>👉 Form ek <strong>section</strong> hota hai website pe, jisme user input deta hai. Jaise:</p>
+        <ul>
+            <li>✔ Login Form</li>
+            <li>✔ Search Box</li>
+            <li>✔ Contact Form</li>
+            <li>✔ Signup Form</li>
+        </ul>
+        <p>Ye input <strong>server</strong> ko bheja jata hai backend processing ke liye.</p>
+    </header>
+
+    <section>
+        <h2>Form ka Basic Structure</h2>
+        <p><code>&lt;form action="" method="POST"&gt;&lt;/form&gt;</code></p>
+
+        <p><strong>&lt;form&gt;:</strong> Ye form ka container hota hai. <br>
+            <strong>✔ action:</strong> Kis page ya script pe data bhejna hai (e.g. PHP file). <br>
+            <strong>✔ method:</strong> Kaunsa HTTP method use karna hai - usually <strong>GET</strong> ya <strong>POST</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h2>Common Form Elements</h2>
+
+        <h5>a) &lt;input&gt;</h5>
+        <p>Ye <strong>user input</strong> ke liye use hota hai.</p>
+        <p><code>&lt;input type="text" name="username" placeholder="Enter your name"&gt;</code></p>
+
+        <ul>
+            <li><strong>type:</strong> kaunsa input (text, password, email, etc.)</li>
+            <li><strong>name:</strong> backend ko data bhejne ke liye</li>
+            <li><strong>placeholder:</strong> user ke liye hint</li>
+        </ul>
+
+        <h5>&lt;textarea&gt;</h5>
+        <p>Jyada text lene ke liye use hota hai (e.g. feedback ya comment box).</p>
+        <p><code>&lt;textarea name="feedback" rows="4" cols="30"&gt;&lt;/textarea&gt;</code></p>
+        <textarea name="feedback" rows="4" cols="30" placeholder="Your feedback here..."></textarea>
+
+        <h5>&lt;select&gt; (Dropdown)</h5>
+        <p><code>
+            &lt;select name="city"&gt;<br>
+            &nbsp;&nbsp;&lt;option value="delhi"&gt;Delhi&lt;/option&gt;<br>
+            &nbsp;&nbsp;&lt;option value="mumbai"&gt;Mumbai&lt;/option&gt;<br>
+            &lt;/select&gt;
+        </code></p>
+
+        <select name="city">
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+        </select>
+
+        <h5>Radio Buttons</h5>
+        <p><code>
+            &lt;input type="radio" name="gender" value="male"&gt; Male<br>
+            &lt;input type="radio" name="gender" value="female"&gt; Female
+        </code></p>
+
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+
+        <h5>Checkboxes</h5>
+        <p><code>
+            &lt;input type="checkbox" name="hobby" value="cricket"&gt; Cricket<br>
+            &lt;input type="checkbox" name="hobby" value="music"&gt; Music
+        </code></p>
+
+        <input type="checkbox" name="hobby" value="cricket"> Cricket
+        <input type="checkbox" name="hobby" value="music"> Music
+
+        <h5>Password Field</h5>
+        <p><code>&lt;input type="password" name="userpass"&gt;</code></p>
+        <input type="password" name="userpass" placeholder="Enter password">
+
+        <h5>Submit Button</h5>
+        <p><code>&lt;input type="submit" value="Submit"&gt;</code></p>
+        <input type="submit" value="Submit">
+    </section>
+
+    <section>
+        <h2>Method: GET vs POST</h2>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+                <th>Data Size</th>
+                <th>Security</th>
+            </tr>
+            <tr>
+                <td><strong>GET</strong></td>
+                <td>URL me data dikhai deta hai (visible)</td>
+                <td>Small data (search)</td>
+                <td>Less secure</td>
+            </tr>
+            <tr>
+                <td><strong>POST</strong></td>
+                <td>Data hidden hota hai</td>
+                <td>Large data (login, signup)</td>
+                <td>More secure</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>🟦 <strong>Summary:</strong><br>
+            HTML forms ka kaam – user ka data lena & backend ko bhejna. <br>
+            Forms me input, textarea, select, button sab milke form banate hain. <br>
+            Aur action & method se decide hota hai ki data kaise backend tak jaye.
+        </p>
+    </footer>
+</body>
+<div class="back-button">
+    <a href="index.html">⬅ Back to Home</a>
+  </div>
+
+</html>

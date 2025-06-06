@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tables in HTML</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    section {
+      background-color: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+
+    table, th, td {
+      border: 1px solid #999;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f3b400;
+      color: #fff;
+    }
+
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    h2, h3 {
+      color: #2c3e50;
+    }
+
+    .back-button {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .back-button a {
+      display: inline-block;
+      background-color: #2980b9;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #1c5980;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <h1>HTML Table Example</h1>
+
+    <table>
+      <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+      </tr>
+      <tr>
+        <td>Row1 col1</td>
+        <td>Row1 col2</td>
+      </tr>
+    </table>
+
+    <h2>&lt;table&gt; tag ka use?</h2>
+    <p>➡ Table tag ka use hum kisi bhi data ko table format mein dikhane ke liye karte hain. Jaise ki rows aur columns ke form mein data dikhana ho.</p>
+
+    <ul>
+      <li>&lt;table&gt; - Table tag</li>
+      <li>&lt;tr&gt; - Row banane ke liye</li>
+      <li>&lt;td&gt; - Data cell ke liye</li>
+      <li>&lt;th&gt; - Heading ke liye</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Example Table</h3>
+    <table>
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Bhargav</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Shina</td>
+      </tr>
+    </table>
+  </section>
+
+  <div class="back-button">
+    <a href="index.html">⬅ Back to Home</a>
+  </div>
+
+</body>
+
+</html>
